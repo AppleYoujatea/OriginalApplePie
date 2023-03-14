@@ -1,0 +1,25 @@
+import sys 
+n = int(input())
+answer = []
+
+for _ in range(n): 
+  i = sys.stdin.readline().split()
+  if i[0] =="push":
+    answer.append(i[1])
+  elif i[0] == "pop":
+    if answer:
+        print(answer.pop())
+    else:
+        print("-1")
+  elif i[0] == "top": 
+    if answer:
+      print(answer[-1])
+    else:
+        print("-1")
+  elif i[0] == "size":
+    print(len(answer))
+  elif i[0] == "empty":
+    if answer:
+      print("0")
+    else:
+      print("1")
