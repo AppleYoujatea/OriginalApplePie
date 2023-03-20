@@ -1,0 +1,11 @@
+n = int(input())
+waiting = []
+waiting = list(map(int, input().split()))
+
+waiting.sort()
+answer = 0
+
+for num, i in enumerate(waiting):
+	answer += sum(waiting[:num+1])
+
+print(answer)
