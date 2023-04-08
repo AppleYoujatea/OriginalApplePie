@@ -1,5 +1,5 @@
 
-## 4주차 DP 알고리즘 선정 문제
+## 5주차 그래프 탐색 알고리즘 선정 문제
 
 1. [DFS와 BFS](https://www.acmicpc.net/problem/11726)
 2. [바이러스](https://www.acmicpc.net/problem/2606)
