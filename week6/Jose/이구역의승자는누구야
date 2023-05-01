@@ -1,0 +1,47 @@
+// 확실히 파이썬보다 생각할 때 고려해야 하는 것이 많다.
+// nil 처리나 함수나 생소하다.
+// 오히려 설계 과정에서 생소하니까 중간 단계 점검이 잘 들어가서
+// 결과로는 좋다? 문법에 익숙해지자
+
+
+import Foundation
+
+let input = readLine()!
+
+let code = ["3", "2", "1", "2", "3", "3",  "3", "3", "1", "1",  "3",  "1",  "3", "3", "1", "2", "2", "2", "1", "2", "1", "1", "2", "2", "2", "1"]
+var input_code: [Int] = []
+
+var sum_array: [Int] = []
+ 
+for i in input {
+    let index: Int = Int(i.asciiValue! - Character("A").asciiValue!)
+    input_code.append(Int(code[index])!)
+}
+
+
+while input_code.count > 1 {
+    
+    if input_code.count % 2 == 0 {
+        for i in stride(from: 0, to: input_code.count-1, by: 2){
+            var temp = input_code[i] + input_code[i+1]
+            sum_array.append(temp)
+        }
+    } else {
+        for i in stride(from: 0, to: input_code.count-2, by: 2){
+            var temp = input_code[i] + input_code[i+1]
+            sum_array.append(temp)
+        }
+        sum_array.append(input_code[input_code.count - 1])
+    }
+    
+    input_code = sum_array
+    sum_array = []
+}
+
+if input_code[0]%2 == 0{
+    print("You're the winner?")
+} else {
+    print("I'm a winner!")
+}
+
+
