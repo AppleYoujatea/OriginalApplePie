@@ -1,0 +1,15 @@
+# swift 처음
+# readLine()! 입력 받기 
+# components(seperatedBy: ) replace 대신. 
+import Foundation
+
+let input0 = readLine()!
+let input1 = readLine()!
+
+let rmNum = input0.components(separatedBy: CharacterSet.decimalDigits).joined()
+
+if rmNum.contains(input1){
+  print(1)
+} else{
+  print(0)
+}
