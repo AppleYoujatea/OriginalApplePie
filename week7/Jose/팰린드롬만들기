@@ -1,0 +1,37 @@
+# 정렬
+# [기록] 각 문자 카운트 세기. 딕셔너리 저장. 
+# 홀수 두번 나오면 실패 
+# 홀수 한 번 이하로 나오면 성공
+# [결과] 각 문자 카운트/2 씩 저장. 홀수인 것 한번 추가. 앞선 것 인버스
+# 결과 리턴
+
+txt = str(input())
+
+odd = ""
+txt = sorted(list(txt))
+
+count = 0
+record = {}
+txt1 = txt
+while txt1:
+    ch = txt1[0] 
+    count = txt.count(ch)
+    if count % 2 == 1:
+        if odd: 
+            print("I'm Sorry Hansoo")
+            odd = 0
+            break
+        else:
+            odd = ch
+    record[ch] = count
+
+    txt1 = txt1[count:]
+
+result = ""
+
+for key, value in record.items():
+    for i in range(int(value/2)):
+        result += key
+        
+if odd != 0:
+    print(result + odd + result[::-1])
