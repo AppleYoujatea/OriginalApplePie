@@ -1,0 +1,26 @@
+n, m = map(int, input().split())
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+
+ap = 0
+bp = 0
+
+result = []
+
+while ap < n and bp < m:
+    if a[ap] < b[bp]:
+        result.append(a[ap])
+        ap += 1
+    else: 
+        result.append(b[bp])
+        bp += 1
+
+if ap < n:
+    for i in a[ap:]:
+        result.append(i)
+else:
+    for i in b[bp:]:
+        result.append(i)
+
+for i in result:
+    print(i, end=" ")
