@@ -8,7 +8,7 @@
 
 a = int(input())
 
-A_list = list(map(int ,input().split()))
+A_list = list(map(int, input().split()))
 answer_list = [A_list[0], A_list[-1]]
 A_list.sort()
 end = len(A_list) - 1
@@ -17,15 +17,18 @@ start = 0
 target = abs(A_list[0] + A_list[-1])
 while start < end:
 
-    if target * 1 > A_list[start] + A_list[end] > target * -1:
-        target = A_list[start] + A_list[end]
+    if target * 1 >= A_list[start] + A_list[end] >= target * -1:
+        target = abs(A_list[start] + A_list[end])
         answer_list[0] = A_list[start]
         answer_list[-1] = A_list[end]
-        continue
+
     if A_list[start] + A_list[end] >= 0:
         end -= 1
     elif A_list[start] + A_list[end] < 0:
         start += 1
+
+    if target == 0:
+        break
 
 for i in range(len(answer_list)):
     print(answer_list[i], end=" ")
