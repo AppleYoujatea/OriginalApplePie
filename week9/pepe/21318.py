@@ -29,4 +29,5 @@ prefix[-1] = tmp
 # 답 찾기
 for _ in range(questions):
     x, y = map(int, input().split())
+    # prefix가 입력받은 배열보다 size가 1 크다 -> y-1에서 x-1을 빼주어야 함
     print(prefix[y - 1] - prefix[x - 1])
