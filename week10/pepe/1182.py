@@ -19,25 +19,19 @@ cnt 출력
 n, s = map(int, input().split())
 nums = list(map(int, input().split()))
 
-ansVal = 0
-ansArr = []
+ans = []
 cnt = 0
 
-def check():
+def check(start):
     global cnt
-    global ansVal
-    
-    if ansVal == s:
-        cnt += 1
-        return
-    
-    for num in nums:
-        if num not in ansArr:
-            ansArr.append(num)
-            ansVal += num
-            check()
-            ansVal -= num
-            ansArr.pop()
 
-check()
+    if sum(ans) == s and len(ans) > 0:
+        cnt += 1
+
+    for i in range(start, n):
+        ans.append(nums[i])
+        check(i + 1)
+        ans.pop()
+
+check(0)
 print(cnt)
