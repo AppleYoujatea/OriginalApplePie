@@ -6,3 +6,9 @@
 3. [뒤에 있는 큰 수 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/154539)
 4. [주차 요금 계산](https://school.programmers.co.kr/learn/courses/30/lessons/92341)
 5. [추억 점수](https://school.programmers.co.kr/learn/courses/30/lessons/176963)
+
+
+## 1주차 CS 준비
+1. 선택 정렬(Selection Sort)
+2. 거품 정렬(Bubble Sort)
+3. 병합 정렬(Merge Sort)
