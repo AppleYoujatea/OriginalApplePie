@@ -11,4 +11,5 @@
 ## 1주차 CS 준비
 1. 선택 정렬(Selection Sort)
 2. 거품 정렬(Bubble Sort)
-3. 병합 정렬(Merge Sort)
+
+* 이번 주만 페페가 1번 주제(선택 정렬)를 처음 순서로 발표하겠음.
