@@ -29,9 +29,6 @@ def solution(today, terms, privacies):
                     continue
 
         answer.append(i + 1)
-        # 배열사용을 위해 i는 0부터 시작하므로 정답에 +1 하여 추가합니다
-        # print(p_year,p_month,p_day,case)
-
         return answer
 
 
