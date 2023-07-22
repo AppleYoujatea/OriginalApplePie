@@ -2,10 +2,6 @@ import string
 
 
 def solution(new_id):
-    first = False
-    last = False
-    answer = ''
-
     punctuation = string.punctuation
     # 1단계
     new_id = new_id.lower()

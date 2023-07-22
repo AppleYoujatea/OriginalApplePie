@@ -49,5 +49,4 @@ def solution(answers):
     for i in range(len(answer_list)):
         if answer_list[i] == max(answer_list):
             answer.append(i + 1)
-
     return answer

@@ -21,6 +21,4 @@ def solution(ingredient):
             break
         else:
             i += 1
-    print(recipe)
-
     return answer
